@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canadian Citizenship Test - Practice Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-wrapper">
+            <!-- Start Screen -->
+            <div class="start-screen active" id="startScreen">
+                <div class="quiz-header">
+                    <i class="fas fa-flag"></i>
+                    <h1>Canadian Citizenship Test</h1>
+                    <p>Prepare for your Canadian citizenship exam with official practice questions!</p>
+                </div>
+                <div class="quiz-info">
+                    <div class="info-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>60+ Official Questions</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>15 seconds per question</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-trophy"></i>
+                        <span>Real exam preparation</span>
+                    </div>
+                </div>
+
+                <div class="category-selection">
+                    <h3>Choose Your Category</h3>
+                    <div class="categories">
+                        <div class="category-card active" data-category="citizenship">
+                            <i class="fas fa-users"></i>
+                            <span>Citizenship Duties</span>
+                        </div>
+                        <div class="category-card" data-category="government">
+                            <i class="fas fa-university"></i>
+                            <span>Government & Law</span>
+                        </div>
+                        <div class="category-card" data-category="history">
+                            <i class="fas fa-landmark"></i>
+                            <span>Canadian History</span>
+                        </div>
+                        <div class="category-card" data-category="geography">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Geography & Symbols</span>
+                        </div>
+                        <div class="category-card" data-category="rights">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Rights & Freedoms</span>
+                        </div>
+                        <div class="category-card" data-category="mixed">
+                            <i class="fas fa-random"></i>
+                            <span>Mixed Practice</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="start-btn" id="startBtn">
+                    <i class="fas fa-play"></i>
+                    Start Quiz
+                </button>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div class="quiz-screen" id="quizScreen">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="question-counter">
+                        <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
+                    </div>
+                </div>
+
+                <div class="timer-container">
+                    <div class="timer" id="timer">15</div>
+                    <div class="timer-bar">
+                        <div class="timer-fill" id="timerFill"></div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <h2 class="question" id="question">Loading question...</h2>
+                    <div class="options" id="options">
+                        <!-- Options will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button class="next-btn" id="nextBtn" disabled>
+                        Next Question
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Result Screen -->
+            <div class="result-screen" id="resultScreen">
+                <div class="result-icon" id="resultIcon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2 class="result-title" id="resultTitle">Quiz Completed!</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <div class="score-text">
+                            <span class="score-number" id="scoreNumber">0</span>
+                            <span class="score-total">/10</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-details">
+                    <div class="detail-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Correct: <span id="correctAnswers">0</span></span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Wrong: <span id="wrongAnswers">0</span></span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-percentage"></i>
+                        <span>Accuracy: <span id="accuracy">0%</span></span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-fire"></i>
+                        <span>Best Streak: <span id="bestStreak">0</span></span>
+                    </div>
+                </div>
+
+                <div class="achievements" id="achievements">
+                    <!-- Achievement badges will be populated by JavaScript -->
+                </div>
+                <div class="result-actions">
+                    <button class="retry-btn" id="retryBtn">
+                        <i class="fas fa-redo"></i>
+                        Try Again
+                    </button>
+                    <button class="home-btn" id="homeBtn">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
